@@ -504,7 +504,7 @@ Este documento contiene 30 historias de usuario para la plataforma educativa, or
 
 ---
 
-### Historia #24: Reproductor de Videos Integrado
+### Historia #24: Reproductor de Videos Integrados
 **Nombre:** Como estudiante, quiero ver videos educativos directamente en la plataforma para facilitar mi aprendizaje.
 
 **Descripción:**
