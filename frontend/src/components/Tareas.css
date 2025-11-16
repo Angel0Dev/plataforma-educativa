@@ -1,0 +1,318 @@
+/* Estilos para la página de Tareas */
+.tareas-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 100px 20px 20px 20px;
+}
+
+.access-denied {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.access-denied h2 {
+    color: #e74c3c;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.access-denied p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.tareas-header {
+    text-align: center;
+    margin-bottom: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tareas-header h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.tareas-header p {
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.tareas-filters {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.filter-group label {
+    color: #333;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.filter-group select {
+    padding: 8px 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background: white;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.tareas-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.tarea-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 4px solid #667eea;
+}
+
+.tarea-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.tarea-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.tarea-header h3 {
+    color: #333;
+    font-size: 1.3rem;
+    margin: 0;
+    flex: 1;
+}
+
+.tarea-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.estado-badge {
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.estado-badge.estado-pendiente {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.estado-badge.estado-progreso {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.estado-badge.estado-completado {
+    background: #d4edda;
+    color: #155724;
+}
+
+.prioridad-badge {
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.prioridad-badge.prioridad-alta {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.prioridad-badge.prioridad-media {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.prioridad-badge.prioridad-baja {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.tarea-content {
+    margin-bottom: 20px;
+}
+
+.tarea-materia {
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.tarea-descripcion {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.tarea-fecha {
+    color: #e74c3c;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.tarea-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary {
+    padding: 10px 20px;
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.no-tareas {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.no-tareas h3 {
+    color: #28a745;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.no-tareas p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tareas-container {
+        padding: 80px 15px 15px 15px;
+    }
+    
+    .tareas-header h1 {
+        font-size: 2rem;
+    }
+    
+    .tareas-filters {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .tareas-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .tarea-card {
+        padding: 20px;
+    }
+    
+    .tarea-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .tarea-actions {
+        justify-content: stretch;
+    }
+    
+    .tarea-actions .btn-primary,
+    .tarea-actions .btn-secondary {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .tareas-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .tarea-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .tarea-badges {
+        justify-content: flex-start;
+    }
+}

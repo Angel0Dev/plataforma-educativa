@@ -1,0 +1,148 @@
+/* Estilos para el modal de advertencia de timeout */
+
+.timeout-warning-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.timeout-warning-modal {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease-out;
+    text-align: center;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.timeout-warning-header {
+    margin-bottom: 20px;
+}
+
+.timeout-warning-header h3 {
+    margin: 0;
+    color: #dc3545;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.timeout-warning-content {
+    margin-bottom: 25px;
+}
+
+.timeout-warning-content p {
+    margin: 10px 0;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.timeout-countdown {
+    font-size: 1.2rem !important;
+    color: #dc3545 !important;
+    font-weight: 600;
+    margin-top: 15px !important;
+}
+
+.timeout-countdown strong {
+    font-size: 1.5rem;
+    color: #dc3545;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.timeout-warning-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btn-timeout-continue,
+.btn-timeout-logout {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 150px;
+}
+
+.btn-timeout-continue {
+    background: #28a745;
+    color: white;
+}
+
+.btn-timeout-continue:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.btn-timeout-logout {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-timeout-logout:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .timeout-warning-modal {
+        padding: 20px;
+    }
+    
+    .timeout-warning-actions {
+        flex-direction: column;
+    }
+    
+    .btn-timeout-continue,
+    .btn-timeout-logout {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,1446 @@
+/* Estilos específicos para los dashboards */
+
+/* Lista de Tareas */
+.tareas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tarea-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.tarea-info h4 {
+    color: #333;
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.tarea-info p {
+    color: #666;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.tarea-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-badge.pendiente {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-badge.en-progreso {
+    background: #d1ecf1;
+    color: #0c5460;
+}
+
+.status-badge.completado {
+    background: #d4edda;
+    color: #155724;
+}
+
+/* Lista de Calificaciones */
+.calificaciones-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.calificacion-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.cal-info h4 {
+    color: #333;
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.cal-info p {
+    color: #666;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.nota-badge {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.nota-badge.excelente {
+    background: #28a745;
+}
+
+.nota-badge.buena {
+    background: #ffc107;
+    color: #333;
+}
+
+.nota-badge.regular {
+    background: #dc3545;
+}
+
+/* Lista de Cursos */
+.cursos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.curso-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.curso-info {
+    flex: 1;
+}
+
+.curso-info h4 {
+    color: #333;
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.curso-info p {
+    color: #666;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.curso-progreso {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 120px;
+}
+
+.progreso-bar {
+    width: 80px;
+    height: 8px;
+    background: #e1e5e9;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progreso-fill {
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transition: width 0.3s ease;
+}
+
+.progreso-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Lista de Clases */
+.clases-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.clase-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.clase-info h4 {
+    color: #333;
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.clase-info p {
+    color: #666;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Lista de Estudiantes */
+.estudiantes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.estudiante-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.estudiante-info h4 {
+    color: #333;
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.estudiante-info p {
+    color: #666;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.promedio-badge {
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.promedio-badge.excelente {
+    background: #28a745;
+}
+
+.promedio-badge.buena {
+    background: #17a2b8;
+}
+
+.promedio-badge.regular {
+    background: #ffc107;
+    color: #333;
+}
+
+/* Lista de Alertas */
+.alertas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.alerta-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid;
+}
+
+.alerta-item.alta {
+    background: #f8d7da;
+    border-left-color: #dc3545;
+}
+
+.alerta-item.media {
+    background: #fff3cd;
+    border-left-color: #ffc107;
+}
+
+.alerta-item.baja {
+    background: #d1ecf1;
+    border-left-color: #17a2b8;
+}
+
+.alerta-info h4 {
+    color: #333;
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.alerta-info p {
+    color: #666;
+    margin: 0 0 5px 0;
+    font-size: 0.9rem;
+}
+
+.alerta-fecha {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.prioridad-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.prioridad-badge.alta {
+    background: #dc3545;
+    color: white;
+}
+
+.prioridad-badge.media {
+    background: #ffc107;
+    color: #333;
+}
+
+.prioridad-badge.baja {
+    background: #17a2b8;
+    color: white;
+}
+
+/* Lista de Eventos */
+.eventos-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.evento-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.evento-info h4 {
+    color: #333;
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.evento-info p {
+    color: #666;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.tipo-badge {
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tipo-badge.reunión {
+    background: #667eea;
+    color: white;
+}
+
+.tipo-badge.académico {
+    background: #28a745;
+    color: white;
+}
+
+.tipo-badge.evento {
+    background: #ffc107;
+    color: #333;
+}
+
+/* Lista de Comunicaciones */
+.comunicaciones-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comunicacion-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.comunicacion-item.leido {
+    background: #f8f9fa;
+}
+
+.comunicacion-item.no-leido {
+    background: #e3f2fd;
+    border-left: 4px solid #2196f3;
+}
+
+.com-info h4 {
+    color: #333;
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.com-info p {
+    color: #666;
+    margin: 0 0 5px 0;
+    font-size: 0.9rem;
+}
+
+.com-fecha {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.no-leido-badge {
+    padding: 2px 8px;
+    background: #2196f3;
+    color: white;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+/* Grid de Acciones */
+.acciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+/* Botones en las tarjetas */
+.card-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card-actions .btn-primary,
+.card-actions .btn-secondary {
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    min-width: 120px;
+}
+
+.card-actions .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.card-actions .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.card-actions .btn-secondary {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.card-actions .btn-secondary:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Botones específicos en listas */
+.tarea-actions,
+.curso-actions,
+.clase-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.tarea-actions .btn-primary,
+.tarea-actions .btn-secondary,
+.curso-actions .btn-primary,
+.curso-actions .btn-secondary,
+.clase-actions .btn-primary,
+.clase-actions .btn-secondary {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    min-width: auto;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Estilos específicos para botones en listas */
+.tarea-actions .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.tarea-actions .btn-secondary {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.curso-actions .btn-primary {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+}
+
+.curso-actions .btn-secondary {
+    background: transparent;
+    color: #28a745;
+    border: 2px solid #28a745;
+}
+
+.clase-actions .btn-primary {
+    background: linear-gradient(135deg, #fd7e14 0%, #e83e8c 100%);
+    color: white;
+}
+
+.clase-actions .btn-secondary {
+    background: transparent;
+    color: #fd7e14;
+    border: 2px solid #fd7e14;
+}
+
+/* Hover effects para botones en listas */
+.tarea-actions .btn-primary:hover,
+.curso-actions .btn-primary:hover,
+.clase-actions .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tarea-actions .btn-secondary:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.curso-actions .btn-secondary:hover {
+    background: #28a745;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.clase-actions .btn-secondary:hover {
+    background: #fd7e14;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.acciones-grid .btn-primary,
+.acciones-grid .btn-secondary {
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Estilos específicos para Dashboard Administrador */
+
+/* Lista de Usuarios */
+.usuarios-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.usuario-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.usuario-info h4 {
+    color: #333;
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.usuario-info p {
+    color: #666;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.usuario-rol {
+    min-width: 150px;
+}
+
+.rol-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    background: white;
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.rol-select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.usuario-status {
+    min-width: 80px;
+}
+
+.status-badge.activo {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-badge.inactivo {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.usuario-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.usuario-actions .btn-secondary,
+.usuario-actions .btn-danger {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    min-width: auto;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.usuario-actions .btn-secondary {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.usuario-actions .btn-danger {
+    background: transparent;
+    color: #dc3545;
+    border: 2px solid #dc3545;
+}
+
+.usuario-actions .btn-secondary:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.usuario-actions .btn-danger:hover {
+    background: #dc3545;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Input para notas */
+.nota-input {
+    width: 80px;
+    padding: 8px 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    background: white;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.nota-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Modales */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal.large {
+    max-width: 800px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: #f8f9fa;
+    color: #333;
+}
+
+.modal-content {
+    padding: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    background: white;
+    font-size: 0.9rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e1e5e9;
+}
+
+.modal-actions .btn-primary,
+.modal-actions .btn-secondary {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    min-width: 100px;
+}
+
+.modal-actions .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.modal-actions .btn-secondary {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.modal-actions .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.modal-actions .btn-secondary:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Tabla de usuarios */
+.usuarios-table {
+    overflow-x: auto;
+}
+
+.usuarios-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.usuarios-table th,
+.usuarios-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.usuarios-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.usuarios-table td {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.usuarios-table tr:hover {
+    background: #f8f9fa;
+}
+
+.usuarios-table select {
+    padding: 6px 10px;
+    border: 1px solid #e1e5e9;
+    border-radius: 6px;
+    background: white;
+    font-size: 0.8rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.usuarios-table .btn-secondary,
+.usuarios-table .btn-danger {
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    margin-right: 5px;
+}
+
+/* Estilos para el modal de asignación de docentes */
+.curso-info-modal {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.curso-info-modal h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.curso-info-modal p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.docentes-list {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.docente-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #e1e5e9;
+    transition: all 0.3s ease;
+}
+
+.docente-item:hover {
+    background: #e3f2fd;
+    border-color: #667eea;
+}
+
+.docente-info h5 {
+    margin: 0 0 5px 0;
+    color: #333;
+    font-size: 1rem;
+}
+
+.docente-info p {
+    margin: 0 0 5px 0;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.docente-status {
+    padding: 2px 8px;
+    background: #d4edda;
+    color: #155724;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.no-docentes {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+}
+
+.no-docentes p {
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
+}
+
+.no-docentes p:last-child {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.no-data {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 2px dashed #dee2e6;
+}
+
+.no-data p {
+    margin: 0;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* Estilos para manejo de errores */
+.dashboard-error {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 10px;
+    color: #721c24;
+    margin: 20px 0;
+}
+
+.dashboard-error h2 {
+    margin: 0 0 15px 0;
+    color: #721c24;
+}
+
+.dashboard-error p {
+    margin: 0 0 20px 0;
+    font-size: 1rem;
+}
+
+.error-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.error-actions .btn-primary,
+.error-actions .btn-secondary {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    min-width: 120px;
+}
+
+.error-actions .btn-primary {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: white;
+}
+
+.error-actions .btn-secondary {
+    background: transparent;
+    color: #dc3545;
+    border: 2px solid #dc3545;
+}
+
+.error-actions .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+}
+
+.error-actions .btn-secondary:hover {
+    background: #dc3545;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Botones de acción en el header de las tarjetas */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header .btn-primary {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.card-header .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tarea-item,
+    .calificacion-item,
+    .curso-item,
+    .clase-item,
+    .estudiante-item,
+    .alerta-item,
+    .evento-item,
+    .comunicacion-item,
+    .usuario-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .tarea-status,
+    .cal-nota,
+    .curso-progreso,
+    .clase-actions,
+    .estudiante-promedio,
+    .alerta-prioridad,
+    .evento-tipo,
+    .com-status,
+    .tarea-actions,
+    .curso-actions,
+    .usuario-rol,
+    .usuario-status,
+    .usuario-actions {
+        align-self: stretch;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .tarea-actions,
+    .curso-actions,
+    .clase-actions,
+    .usuario-actions {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .acciones-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-actions {
+        justify-content: center;
+    }
+
+    .card-actions .btn-primary,
+    .card-actions .btn-secondary {
+        min-width: 150px;
+    }
+
+    .modal {
+        margin: 10px;
+        max-width: calc(100% - 20px);
+    }
+
+    .modal-actions {
+        flex-direction: column;
+    }
+
+    .modal-actions .btn-primary,
+    .modal-actions .btn-secondary {
+        width: 100%;
+    }
+
+    .usuarios-table {
+        font-size: 0.8rem;
+    }
+
+    .usuarios-table th,
+    .usuarios-table td {
+        padding: 8px;
+    }
+
+    .docente-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .docente-item .btn-primary {
+        align-self: stretch;
+        text-align: center;
+    }
+
+    .docentes-list {
+        max-height: 250px;
+    }
+}
+
+/* Estilos para mensajería */
+.messages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.message-item {
+    background: white;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.message-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.message-sender {
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.message-date {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.message-subject {
+    font-weight: 500;
+    color: #495057;
+    margin: 0.5rem 0;
+}
+
+.message-content {
+    color: #6c757d;
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.message-course {
+    display: inline-block;
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+/* Estilos para cursos */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.course-card {
+    background: white;
+    border: 1px solid #e1e5e9;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.course-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+    flex: 1;
+}
+
+.course-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.course-status.active {
+    background: #d4edda;
+    color: #155724;
+}
+
+.course-description {
+    color: #6c757d;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.course-stats {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.course-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Estilos para estudiantes */
+.students-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.student-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.student-info h4 {
+    margin: 0 0 0.25rem 0;
+    color: #2c3e50;
+}
+
+.student-info p {
+    margin: 0 0 0.5rem 0;
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+.status {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status.activo {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status.inactivo {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Estilos para formularios de mensajes */
+.curso-context {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+    font-size: 0.875rem;
+}
+
+/* Estilos para matrículas */
+.matriculas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.matricula-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.matricula-item:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.matricula-info h4 {
+    margin: 0 0 0.25rem 0;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.matricula-info p {
+    margin: 0 0 0.25rem 0;
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+.matricula-status {
+    margin: 0 1rem;
+}
+
+.status-select {
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background: white;
+    font-size: 0.875rem;
+}
+
+.status-select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+.matricula-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.matricula-actions .btn-secondary {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}

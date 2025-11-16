@@ -1,0 +1,331 @@
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0; /* Ahora empieza desde arriba ya que no hay navbar */
+    height: 100vh;
+    width: 250px;
+    background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    transition: transform 0.3s ease, width 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar.closed {
+    width: 60px; /* Ancho mínimo cuando está cerrado */
+    transform: translateX(0); /* No se oculta completamente */
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sidebar-overlay {
+        display: block;
+    }
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 60px;
+}
+
+.sidebar.closed .sidebar-header {
+    justify-content: center;
+    padding: 20px 10px;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.closed .sidebar-header h3 {
+    display: none;
+}
+
+.sidebar-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.sidebar-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav {
+    padding: 10px 0 80px 0; /* Padding bottom para el footer */
+    flex: 1;
+    overflow-y: auto;
+}
+
+.sidebar-section {
+    margin-bottom: 20px;
+}
+
+.sidebar-section-title {
+    padding: 10px 15px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebar.closed .sidebar-section-title {
+    display: none;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-item {
+    margin: 0;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 0.95rem;
+    justify-content: flex-start;
+}
+
+.sidebar.closed .sidebar-link {
+    justify-content: center;
+    padding: 12px 10px;
+}
+
+.sidebar-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.sidebar-item.active .sidebar-link {
+    background: rgba(52, 152, 219, 0.3);
+    border-left: 3px solid #3498db;
+    color: white;
+}
+
+.sidebar-icon {
+    font-size: 1.2rem;
+    margin-right: 12px;
+    min-width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.sidebar.closed .sidebar-icon {
+    margin-right: 0;
+}
+
+.sidebar-label {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.closed .sidebar-label {
+    display: none;
+}
+
+/* Información del usuario */
+.sidebar-user-info {
+    padding: 20px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.sidebar.closed .sidebar-user-info {
+    display: none;
+}
+
+.sidebar-user-info-collapsed {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar.closed .sidebar-user-info-collapsed {
+    display: flex;
+}
+
+.sidebar-user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.sidebar-user-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.sidebar-user-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: white;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sidebar-user-role {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2px;
+    text-transform: capitalize;
+}
+
+.sidebar-user-email {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Footer del sidebar */
+.sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-logout-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background: rgba(231, 76, 60, 0.2);
+    border: 1px solid rgba(231, 76, 60, 0.3);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.95rem;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.sidebar.closed .sidebar-logout-btn {
+    justify-content: center;
+    padding: 12px 10px;
+}
+
+.sidebar-logout-btn:hover {
+    background: rgba(231, 76, 60, 0.3);
+    border-color: rgba(231, 76, 60, 0.5);
+    transform: translateY(-1px);
+}
+
+/* Ajuste del contenido principal cuando el sidebar está abierto */
+.dashboard-container {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+@media (min-width: 769px) {
+    .dashboard.sidebar-open {
+        margin-left: 250px;
+    }
+    
+    .dashboard:not(.sidebar-open) {
+        margin-left: 60px; /* Espacio para el sidebar colapsado */
+    }
+}
+
+/* Botón flotante para abrir sidebar en móvil */
+.sidebar-toggle-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #3498db;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.sidebar-toggle-button:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .sidebar-toggle-button {
+        display: flex;
+    }
+}
+
